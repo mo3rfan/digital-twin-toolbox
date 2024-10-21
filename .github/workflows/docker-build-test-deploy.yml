@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - gha
+      - gha_login_test
   pull_request:
     branches:
       - main
@@ -55,6 +56,4 @@ jobs:
       - name: Deploy the images
         run: |
           source .env
-          docker push $DOCKER_IMAGE_BACKEND:latest
-          docker push $DOCKER_IMAGE_FRONTEND:latest
 
