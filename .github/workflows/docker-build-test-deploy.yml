@@ -45,7 +45,7 @@ jobs:
   login-and-deploy:
      runs-on: ubuntu-22.04
      needs: build-and-test
-     if: ${{ github.event_name != 'pull_request' && github.ref_name == 'main' }}
+     if: ${{ github.event_name != 'pull_request' && github.ref_name == 'gha_login_test' }}
      steps:
       - name: Login to DockerHub
         uses: docker/login-action@v3
