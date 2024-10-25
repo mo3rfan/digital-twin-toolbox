@@ -56,4 +56,5 @@ jobs:
       - name: Deploy the images
         run: |
           source .env
-
+          docker push $DOCKER_IMAGE_BACKEND:gha_test
+          docker push $DOCKER_IMAGE_FRONTEND:gha_test
